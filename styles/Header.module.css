@@ -1,0 +1,74 @@
+.start {
+    color: var(--clr-accent-400);
+    text-decoration: none;
+  }
+
+.warning {
+  color: var(--clr-accent-500);
+  text-decoration: none;
+ }
+
+ .titletext {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+ }
+  
+  .title {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 6rem;
+    width: 100vw;
+    
+  }
+
+  .titleback {
+    
+    width:100vw;
+    max-height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40vh;
+    
+  }
+  
+  .title span {
+    width:35vw;
+  }
+
+
+  .title,
+  .description {
+    text-align: center;
+  }
+  
+  .description {
+    margin: 2rem 0;
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+
+  .button {
+    cursor: pointer;
+    display: inline-flex;
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    background: transparent;
+    padding: 0.5em 1.25em;
+    border-radius: 0.5rem;
+    transform: scale(0.95);
+
+    transition: all 500ms ease-out;
+    
+}
+
+.button:hover,
+.button:focus {
+    transform: scale(1.05);
+    
+}
+
+.img {
+  width: 90vw;
+  max-height: 50vh;
+  margin-bottom: 5rem;
+}
