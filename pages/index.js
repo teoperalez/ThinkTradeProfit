@@ -4,12 +4,12 @@ import StratList from '../Components/StratList'
 import BlogList from '../Components/BlogList'
 import Robinhood from '../Components/Robinhood'
 import { useState, useEffect } from 'react'
-import {data} from '../indidata'
+
 
 
 export default function Home() {
   const [section, setSection] = useState(1); 
-  const [indicators, setIndicators] = useState([data]);
+  const [indicators, setIndicators] = useState([]);
 
   useEffect( () =>  {
     
@@ -24,7 +24,7 @@ export default function Home() {
     };
   
     fetchData();
-  }, []);
+  }, [response]);
 
   return (
     <div>
