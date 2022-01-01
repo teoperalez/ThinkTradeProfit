@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 html,
 body {
   padding: 0;
@@ -19,7 +27,6 @@ body {
 body {
   color: black;
   background-color: white;
-  margin-left:5rem;
   padding: 0;
   overflow-x: hidden;
 }
@@ -41,19 +48,15 @@ a {
   text-decoration: none;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 
 :root {
-  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-900: hsl(193, 70%, 21%);
+  --clr-neutral-700: hsl(193, 36%, 40%);
   --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-accent-400: hsl(145, 79%, 53%);
-  --clr-accent-500: hsl(0, 100%, 49%);
+  --clr-accent-400: hsl(193, 72%, 50%);
+  --clr-accent-500: hsl(49, 72%, 50%);
 }
-
 *,
 *::before,
 *::after {
@@ -61,13 +64,24 @@ a {
 }
 
 body {
-  display: -ms-grid;
-  display: grid;
+  display: flex;
   min-height: 100vh;
   place-items: center;
   line-height: 1.6;
   background: var(--clr-neutral-100);
   font-family:sans-serif;
   color: var(--clr-neutral-900)
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    margin-left: 5rem;
+  }
 }
 

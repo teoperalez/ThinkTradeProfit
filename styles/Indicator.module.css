@@ -1,9 +1,12 @@
 .sectiontop {
-    margin-top: 3rem;
+    margin-top: 1rem;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: ifr ifr ifr;
 }
 
 .contents {
-    background-color: var(--clr-neutral-700);
+    background-color: var(--clr-neutral-100);
     display: flex;
     position: relative;
     flex-direction: row;
@@ -13,7 +16,6 @@
     --padding: 1rem;
     padding: var(--padding);
     color: var(--clr-neutral-900);  
-    box-shadow: 0.025rem 0.05rem 0.2rem var(--clr-accent-400) ;
 }
 
 .title {
@@ -24,7 +26,6 @@
     --padding: 1rem;
     padding: var(--padding);
     
-    
     z-index: 1;
     
     
@@ -32,10 +33,10 @@
 
 .title::before{
     content: '';
-    background-color: var(--clr-accent-400);
+    background-color: var(--clr-neutral-900);
     position: absolute;
     height: 75%;
-    width: 5rem;
+    width: 100%;
     bottom:0;
     left: 105%;
     transform: skewX(20deg);
@@ -91,20 +92,10 @@
     max-width: 35ch;
     max-height: 50rem;
     border-radius: 0.5rem;
-    box-shadow: 3rem, 2rem var(--clr-accent-400) ;
     overflow: hidden;
     transition: transform 500ms ease;
-    margin: 1rem;
-    box-shadow: 0.025rem 0.05rem 0.2rem var(--clr-accent-400) ;
+    margin: 1rem
     
-}
-
-.card > .img {
-    position:absolute;
-    top: 0;
-    width: 100%;
-    padding-bottom: 13rem;
-        
 }
 
 .card:hover,
@@ -123,7 +114,6 @@
     );
     transform: translateY(65%);
     transition: transform 500ms ease;
-    
 }
 
 .cardcontent > *:not(.cardtitle) {

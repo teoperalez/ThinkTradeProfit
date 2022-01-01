@@ -24,8 +24,6 @@
 
 .card {
     color: var(--clr-neutral-100);
-    background-image: url(../Rain_cover.png);
-    background-size: cover;
     padding: 10rem 0 0 ;
     max-width: 35ch;
     max-height: 50rem;

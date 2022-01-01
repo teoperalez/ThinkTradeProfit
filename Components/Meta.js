@@ -4,7 +4,7 @@ const Meta = ({ title, description, tags }) => {
     return (
         <Head>
             <title>{title}</title>
-            <meta description={description} content={tags} />
+            <meta name={description} content={tags} />
             <link rel="icon" href="/TTP-Logo-1.ico" />
         </Head>
     )

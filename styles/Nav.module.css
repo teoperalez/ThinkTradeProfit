@@ -67,11 +67,11 @@
   }
   
   .faprimary {
-    color: var(--clr-accent-400);
+    color: var(--clr-accent-500);
   }
   
   .fasecondary {
-    color: hsl(145, 53%, 48%);
+    color: var(--clr-accent-400);
   }
   
   .faprimary,
@@ -145,7 +145,7 @@
   @media only screen and (min-width: 600px) {
     .navbar {
       top: 0;
-      width: 7rem;
+      width: 5rem;
       height: 100vh;
     }
   

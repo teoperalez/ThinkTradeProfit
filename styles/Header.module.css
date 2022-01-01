@@ -1,7 +1,30 @@
+.container {
+  height: max-content;
+  padding-bottom: 3rem;
+}
+
 .start {
     color: var(--clr-accent-400);
     text-decoration: none;
   }
+
+.ad {
+  margin-top: 5rem;
+  width:max-content;
+  padding: 1rem;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  border: 1px solid var(--clr-neutral-900);
+  box-shadow: 0.1rem 0.2rem 0.3rem var(--clr-neutral-900) ;
+  transform: scale(0.95);
+  transition: all 500ms ease;;
+}
+
+.ad:hover {
+  color: var(--clr-accent-400);
+  transform: scale(1.05);
+}
 
 .warning {
   color: var(--clr-accent-500);
@@ -24,10 +47,12 @@
   .titleback {
     
     width:100vw;
-    max-height: 80vh;
+    max-height: 70vh;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 40vh;
+    
+    justify-content: center;
+    overflow-y: hidden;
     
   }
   

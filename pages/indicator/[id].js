@@ -1,20 +1,30 @@
+import Meta from "../../Components/Meta";
+import indiStyles from "../../styles/Indicator.module.css"
 import { useRouter } from "next/router";
 import Image from "next/image";
 
 const Indicator = ({ indi }) => {
   const router = useRouter();
-
+  const origin = "http://localhost:3000/"; 
+  
+    
   return (
-    <div>
+    
+    <div className={indiStyles.sectiontop}>
+      <Meta title={"Trading ThinkScripts || " + `${indi.title}`} description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
       <button onClick={() => router.back()}>Back</button>
+      <h1 className={indiStyles.title}>{indi.title} | ${JSON.stringify(indi.price, null, 1)} </h1>
+      <div className={indiStyles.card}>
+      <div className={indiStyles.image}>
+             <Image src={`/${indi.image}`} layout="fill" objectFit="cover"/>
+      </div>
+      </div>
+      <h3>{indi.description}</h3>
+      <p>{indi.tags}</p>
+      <p>{indi.body}</p>
+      <h3>Backtest Results {indi.backtestdates}:</h3>
+      <p>{indi.backtests}</p>
       
-      <h1>{JSON.stringify(indi.title, null, 1)} | ${JSON.stringify(indi.price, null, 1)} </h1>
-      <h3>{JSON.stringify(indi.description, null, 1)}</h3>
-      <p>{JSON.stringify(indi.tags, null, 1)}</p>
-      <p>{JSON.stringify(indi.body, null, 1)}</p>
-      <h3>Backtest Results {JSON.stringify(indi.backtestdates, null, 1)}:</h3>
-      <p>{JSON.stringify(indi.backtests, null, 1)}</p>
-
     </div>
   );
 };

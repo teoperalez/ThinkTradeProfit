@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useReducer, useState } from "react";
+import Meta from '../Components/Meta';
+import { useEffect } from 'react';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -68,22 +70,14 @@ const initialState = {
   backtestdates: "",
 };
 
-export default function Indicator() {
+export default function Indicator({indicators}) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [data, setData] = useState([]);
 
-  const fetchData = async () => {
-    const response = await fetch("/api/indicator");
-
-    if (!response.ok) {
-      throw new Error(`Error: ${response.status}`);
-    }
-    const indicators = await response.json();
-    return setData(indicators);
-  };
+  
 
   const postData = async () => {
-    const response = await fetch("/api/indicator", {
+    const response = await fetch("http://localhost:3000/api/indicator", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -100,6 +94,8 @@ export default function Indicator() {
     return setData(indicators);
   };
   return (
+    <>
+    <Meta title="Trading ThinkScripts || Indicators" description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
     <div style={{ margin: "0 auto", maxWidth: "400px" }}>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <label htmlFor="title">Title</label>
@@ -150,15 +146,27 @@ export default function Indicator() {
             })
           }
         />
+        <label htmlFor="tags">Tags</label>
+        <input
+          type="text"
+          id="tags"
+          value={state.tags}
+          onChange={(e) =>
+            dispatch({
+              type: "UPDATE_TAGS",
+              payload: { tags: e.target.value }
+            })
+          }
+        />
       </div>
       <div
         style={{ marginTop: "1rem", display: "flex", justifyContent: "center" }}
       >
-        <button onClick={fetchData}>FETCH</button>
+        
         <button onClick={postData}>CREATE</button>
       </div>
       <div>Data:</div>
-      {data ? <pre>{JSON.stringify(data, null, 9)}</pre> : null}
+      {data ? <pre>{JSON.stringify(data, null, 4)}</pre> : null}
       {data.length > 0 ? (
         <div style={{ textAlign: "center" }}>
           Click a button to go to individual page
@@ -188,5 +196,24 @@ export default function Indicator() {
         </div>
       ) : null}
     </div>
+    </>
   );
 }
+
+export const getStaticProps = async () => {
+  const response = await fetch("http://localhost:3000/api/indicator");
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+    const indicators = await response.json();
+    return {
+      props: {
+        indicators
+      }
+    }
+  };
+  
+  
+  
+ 

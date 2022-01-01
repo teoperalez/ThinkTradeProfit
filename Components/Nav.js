@@ -59,7 +59,7 @@ const Nav = () => {
           </li>
 
        cl   <li className={navStyles.navitem}>
-            <a href="/about" className={navStyles.navlink}>
+            <a href="/indicator" className={navStyles.navlink}>
               <svg
                 aria-hidden="true"
                 focusable="false"

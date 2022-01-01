@@ -7,7 +7,7 @@ import CTA from './CTA'
 
 const Layout = ({children}) => {
     return (
-        <>
+        <div className={styles.layoutgrid}>
         <Nav />
         <div className={styles.container}>
             <main className={styles.main}>
@@ -17,7 +17,7 @@ const Layout = ({children}) => {
             </main>
         </div>
         <CTA />
-        </>
+        </div>
     )
 
 
