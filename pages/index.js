@@ -4,11 +4,12 @@ import StratList from '../Components/StratList'
 import BlogList from '../Components/BlogList'
 import Robinhood from '../Components/Robinhood'
 import { useState, useEffect } from 'react'
+import {data} from '../indidata'
 
 
 export default function Home() {
   const [section, setSection] = useState(1); 
-  const [indicators, setIndicators] = useState([]);
+  const [indicators, setIndicators] = useState([data]);
 
   useEffect( () =>  {
     
@@ -38,21 +39,6 @@ export default function Home() {
   )
 }
 
-export const getServerSideProps = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6')
-  const articles = await res.json();
-  const response = await fetch("http://localhost:3000/api/indicator");
 
-  if (!response.ok) {
-    throw new Error(`Error: ${response.status}`);
-  }
-  const indicators = await response.json();
-  return {
-    props: {
-      articles,
-      indicators
-    }
-  }
-}
  
 
