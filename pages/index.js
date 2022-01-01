@@ -24,7 +24,7 @@ export default function Home({articles, indicators}) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6')
   const articles = await res.json();
   const response = await fetch("http://localhost:3000/api/indicator");
