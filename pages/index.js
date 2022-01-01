@@ -14,7 +14,7 @@ export default function Home() {
   useEffect( () =>  {
     
     const fetchData = async () => {
-    const response = await fetch("http://localhost:3000/api/indicator");
+    const response = await fetch("https://think-trade-profit-7on24wr6w-teoperalez.vercel.app/api/indicator");
 
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`);
