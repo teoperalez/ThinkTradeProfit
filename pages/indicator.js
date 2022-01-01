@@ -213,6 +213,19 @@ export const getStaticProps = async () => {
       }
     }
   };
+
+  export const getStaticPaths = async () => {
+    const res = await fetch(`http://localhost:3000/api/indicator`)
+
+    const indicators = await res.json() 
+
+    const ids = indicators.map(indicator => indicator.id)
+    const paths = ids.map(id => ({params: {id: id.toString()}}))
+    return {
+        paths,
+        fallback: false
+   }
+}
   
   
   
