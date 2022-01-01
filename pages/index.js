@@ -7,24 +7,11 @@ import { useState, useEffect } from 'react'
 
 
 
-export default function Home() {
+export default function Home({indicators}) {
   const [section, setSection] = useState(1); 
-  const [indicators, setIndicators] = useState([]);
-
-  useEffect( () =>  {
-    
-    const fetchData = async () => {
-    const response = await fetch("https://think-trade-profit-7on24wr6w-teoperalez.vercel.app/api/indicator");
-
-    if (!response.ok) {
-      throw new Error(`Error: ${response.status}`);
-    };
-    const indi = await response.json();
-    setIndicators(indi)
-    };
   
-    fetchData();
-  }, [response]);
+
+  
 
   return (
     <div>
@@ -39,6 +26,18 @@ export default function Home() {
   )
 }
 
+export const getServerSideProps = async () => {
+  const response = await fetch("https://think-trade-profit.vercel.app/api/indicator");
 
+  if (!response.ok) {
+    throw new Error(`Error: ${response.status}`);
+  }
+  const indicators = await response.json();
+  return {
+    props: {
+      indicators
+    }
+  }
+}
  
 
