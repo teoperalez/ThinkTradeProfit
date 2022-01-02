@@ -1,6 +1,8 @@
 .container {
   height: max-content;
   padding-bottom: 3rem;
+  display:flex;
+  flex-direction: column;
 }
 
 .start {

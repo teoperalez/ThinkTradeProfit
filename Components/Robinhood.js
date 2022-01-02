@@ -12,7 +12,7 @@ const Robinhood = () => {
           <div className={headerStyles.ad}> 
           <div className={headerStyles.description}>
             <Image src={logo} objectPosition="center"/>
-            </div>
+          </div>
           <a href="https://blockfi.com/?ref=98c6891b" >
             
             <h1 
