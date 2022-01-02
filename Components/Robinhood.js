@@ -12,16 +12,17 @@ const Robinhood = () => {
           <div className={headerStyles.description}>
             <Image src={logo} objectPosition="center"/>
             </div>
-          <a href="join.robinhood.com/teodorp30" >
+          <a href="https://blockfi.com/?ref=98c6891b" >
             
             <h1 
             
             className={headerStyles.description}>
-                <span>Everyone likes free money!</span><br />
-                <span>Robinhood gives free money!</span>
+                <span>Earn up to 9% on your stablecoins!</span><br />
+                <span>Better return than the S&P without fluctuations!</span>
             </h1>    
             <p className={headerStyles.description}>
-                Sign up for Robinhood here and get a free stock worth up to $225! 
+                Sign up for BlockFi here and get $10 for your first $100 deposit! < br />
+                Then withdraw anytime!   Interest paid daily! 
             </p>
         </a>
 
