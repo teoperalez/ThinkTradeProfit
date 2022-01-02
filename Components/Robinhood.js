@@ -10,7 +10,7 @@ const Robinhood = () => {
     return(
         <div className={headerStyles.container} >
           <div className={headerStyles.ad}> 
-          <div className={headerStyles.description}>
+          <div className={headerStyles.adimg}>
             <Image src={BFlogo} objectPosition="center"/>
           </div>
           <a href="https://blockfi.com/?ref=98c6891b" >
@@ -29,7 +29,7 @@ const Robinhood = () => {
 
        </div>
        <div className={headerStyles.ad}> 
-          <div className={headerStyles.description}>
+          <div className={headerStyles.adimg}>
             <Image src={logo} objectPosition="center"/>
             </div>
           <a href="join.robinhood.com/teodorp30" >
