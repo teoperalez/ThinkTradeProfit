@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import headerStyles from '../styles/Header.module.css'
 import logo from '../public/robinhood.png'
+import BFlogo from '../public/Blockfi.png'
 import Image from 'next/image'
 
 const Robinhood = () => {
@@ -29,7 +30,7 @@ const Robinhood = () => {
        </div>
        <div className={headerStyles.ad}> 
           <div className={headerStyles.description}>
-            <Image src={logo} objectPosition="center"/>
+            <Image src={BFlogo} objectPosition="center"/>
             </div>
           <a href="join.robinhood.com/teodorp30" >
             
