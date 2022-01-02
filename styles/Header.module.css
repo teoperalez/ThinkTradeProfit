@@ -62,13 +62,11 @@
     margin-right: auto;
     
     justify-content: center;
-    overflow-y: hidden;
+    
     
   }
   
-  .title span {
-    width:35vw;
-  }
+
 
 
   .title,
@@ -103,7 +101,7 @@
 }
 
 .img {
-  width: 90vw;
+  width: 100vw;
   max-height: 50vh;
   margin-bottom: 5rem;
 }

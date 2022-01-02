@@ -1,7 +1,7 @@
 import videoStyles from '../styles/Video.module.css'
 
 
-const BlogList = ( ) => {
+const TutorialsList = ( ) => {
 
     return (
         
@@ -16,4 +16,4 @@ const BlogList = ( ) => {
     )
 }
 
-export default BlogList
+export default TutorialsList

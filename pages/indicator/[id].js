@@ -11,18 +11,24 @@ const Indicator = ({ indi }) => {
     
     <div className={indiStyles.sectiontop}>
       <Meta title={"Trading ThinkScripts || " + `${indi.title}`} description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
-      <button onClick={() => router.back()}>Back</button>
-      <h1 className={indiStyles.title}>{indi.title} | ${JSON.stringify(indi.price, null, 1)} </h1>
-      <div className={indiStyles.card}>
-      <div className={indiStyles.image}>
-             <Image src={`/${indi.image}`} layout="fill" objectFit="cover"/>
-      </div>
-      </div>
-      <h3>{indi.description}</h3>
-      <p>{indi.tags}</p>
-      <p>{indi.body}</p>
-      <h3>Backtest Results {indi.backtestdates}:</h3>
-      <p>{indi.backtests}</p>
+      <div className={indiStyles.title}><h1>{indi.title} |</h1></div> 
+      <div className={indiStyles.patprice}><a href="https://www.patreon.com/user?u=67002473"><h1>${indi.patronprice}/mo </h1><p>with Patreon {indi.patronlevel} tier</p></a></div>
+      <div className={indiStyles.or}><h1>OR</h1></div>
+      <div className={indiStyles.fivprice}><a href="https://www.fiverr.com/teoperalez/code-any-thinkscript-indicator-alert-or-strategy?source=order_page_summary_gig_link_image&funnel=0938d61a77d1d602495d1a69a5da3c2d"><h1>${indi.fiverrprice}</h1><p> from Fiverr</p></a></div>
+
+      
+      
+        <div className={indiStyles.image}>
+             <Image src={`/${indi.image}`} width={400} height={300}layout="responsive" objectFit="cover"/>
+       </div>
+       <p className={indiStyles.tags}>{indi.tags}</p>
+      <h3 className={indiStyles.description}>{indi.description}</h3>
+      
+      <p className={indiStyles.body}>{indi.body}</p>
+      <h3 className={indiStyles.backtest}>Backtest Results {indi.backtestdates}:</h3>
+      <p className={indiStyles.tests}>{indi.backtests}</p>
+      <button className={indiStyles.button}onClick={() => router.back()}>Back</button>
+
       
     </div>
   );
@@ -32,6 +38,7 @@ export async function getServerSideProps(context) {
   const { id } = context.params;
   const indi = await fetch(`https://www.thinktradeprofit.com/api/indicator/${id}`);
   const data = await indi.json();
+  console.log(data);
 
   if (!data) {
     return {

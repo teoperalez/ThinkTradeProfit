@@ -1,209 +1,116 @@
 .sectiontop {
-    margin-top: 1rem;
-    width: 100vw;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: ifr ifr ifr;
-}
-
-.contents {
-    background-color: var(--clr-neutral-100);
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
-    --padding: 1rem;
-    padding: var(--padding);
-    color: var(--clr-neutral-900);  
+    
+    -ms-grid-columns: 33%;
+    grid-auto-columns: 1fr;
+    
+    grid-template-areas: 
+        'one one one'
+        'two three four'
+        'five five five'
+        'six six six'
+        'seven seven seven'
+        'eight eight eight'
+        'nine ten ten'
+        'eleven eleven eleven';
+    gap: 1rem;
+    margin: 1rem 1rem 1rem 1rem;
 }
 
 .title {
-    position:relative;
-    color: var(--clr-neutral-100);
-    width: max-content;
+    grid-area: one;
     max-width: 100%;
-    --padding: 1rem;
-    padding: var(--padding);
-    
-    z-index: 1;
-    
-    
 }
 
-.title::before{
-    content: '';
-    background-color: var(--clr-neutral-900);
-    position: absolute;
-    height: 75%;
-    width: 100%;
-    bottom:0;
-    left: 105%;
-    transform: skewX(20deg);
-    z-index: -2;
-    
-
-
-}
-.title::after {
-    content:'';
-    position: absolute;
-    height: 10px;
-    background: var(--clr-accent-500);
-    width: calc(100% + 3rem);
-    height: 100%;
-    bottom:0;
-    left: -3rem;
-    z-index: -1;
-    transform: skewX(20deg);
-    transition: 200ms ease-in;
+.patprice {
+    grid-area: two;
 }
 
-.carouselbutton {
-    position: absolute;
-    z-index: 2;
-    background: none;
-    border: none;
-    font-size: 4rem;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-    color: var(--clr-accent-400);
-    cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, 0.1);
+.or {
+    grid-area: three;
+    margin: auto;
 }
 
-.leftbutton {
-    left: 0;
+.fivprice {
+    grid-area: four;
 }
 
-.rightbutton {
-    right: 0;
-}
-
-
-.card {
-    position: relative;
-    color: var(--clr-neutral-100);
-    background-color: var(--clr-neutral-900);
-    padding: 10rem 0 0 ;
-    max-width: 35ch;
-    max-height: 50rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: transform 500ms ease;
-    margin: 1rem
-    
-}
-
-.card:hover,
-.card:focus-within {
-    transform: scale(1.05);
-    
-}
-
-.cardcontent {
-    --padding: 1.5rem;
-    padding: var(--padding);
-    background: linear-gradient(
-        hsl(0 0% 0% / 0),
-        hsl(0 0% 0% / 0.3) 20%,
-        hsl(0 0% 0% / 1)
-    );
-    transform: translateY(65%);
-    transition: transform 500ms ease;
-}
-
-.cardcontent > *:not(.cardtitle) {
-    opacity: 0; 
-    transition: opacity 500ms linear;
-}
-
-
-
-.cardtitle {
-    position: relative;
-    width: 100%;
+.tags {
+    grid-area: five;
     max-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.7rem;
-    z-index: 1000;
-    
 }
 
-.cardtitle::before {
-    content:'';
-    position: absolute;
-    background: var(--clr-accent-500);
-    width: calc(100% - 1rem);
-    height: calc(100% - 2rem);
-    left: calc(var(--padding)*-1);
-    z-index: -1;
-    transform: skewX(20deg);
+.image {
+    grid-area: six;
+    width: 100%;
 }
 
-.cardtitle::after {
-    content:'';
-    position: absolute;
-    height: 0.3rem;
-    background: var(--clr-accent-400);
-    width: calc(100% + var(--padding));
-    left: calc(var(--padding)*-1);
-    bottom: 0;
-    
+.description {
+    grid-area: seven;
 }
 
-.cardbody {
-    color: rgb(255 255 255 / 0.85);
+.body {
+    grid-area: eight; 
 }
 
+.backtests {
+    grid-area: nine;
+}
 
-    .card:hover .cardcontent,
-    .card:focus-within .cardcontent {
-        transform: translateY(0);
-        transition-delay: 300ms;
-    }
+.tests {
+    grid-area: ten;
+}
 
-    .card:focus-within .cardcontent {
-        transition-duration: 0ms;
-    }
-
-    .card:hover .cardcontent > *:not(.cardtitle),
-    .card:focus-within .cardcontent > *:not(.cardtitle) {
-        opacity: 1; 
-        transition-delay: 500ms;
-    }
-    .cardtitle::after {
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 500ms ease;
-    }
-    .card:hover .cardtitle::after,
-    .card:focus-within .cardtitle::after {
-        transform: scaleX(1);
-    }
 
 
 .button {
-    cursor: pointer;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--clr-neutral-900);
-    background: var(--clr-accent-400);
-    padding: 0.5rem 1.25rem;
-    border-radius: 0.25rem;
-    margin-top: 1rem;
-    transform-origin: center;
-    transition: all 200ms;
+    grid-area: eleven;
 }
 
-.button:hover,
-.button:focus {
-    background-color: var(--clr-accent-500);
+@media (min-width: 30em) {
+    .sectiontop {
+        width: calc(100%-5rem);
+        grid-template-areas: 
+            'one one eleven'
+            'two three four'
+            'seven seven seven'
+            'five five five'
+            'six six six' 
+            'eight eight eight'
+            'nine nine nine'
+            'ten ten ten'
+            ;
+
+    }
 }
 
+@media (min-width: 35em) {
+    .sectiontop {
+        grid-template-areas: 
+            'one one eleven'
+            'two three four'
+            'seven seven seven'
+            'five five five'
+            'six eight eight'
+            'nine nine nine'
+            'ten ten ten'
+            ;
 
+    }
+}
+
+@media (min-width: 55em) {
+    .sectiontop {
+        grid-template-areas: 
+            'one one eleven'
+            'two three four'
+            'seven seven seven'
+            'five five five'
+            'six eight eight'
+            'six nine ten '
+            ;
+
+    }
+}
 

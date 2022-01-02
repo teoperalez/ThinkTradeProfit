@@ -9,7 +9,8 @@
   }
 
   .navbar::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.1rem;
+    height: 0rem;
   }
   
   .navbar::-webkit-scrollbar-track {

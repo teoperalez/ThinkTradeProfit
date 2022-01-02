@@ -2,6 +2,8 @@
     margin-top: 3rem;
 }
 
+
+
 .contents {
     background-color: var(--clr-neutral-700);
     display: flex;
@@ -24,6 +26,7 @@
     --padding: 1rem;
     padding: var(--padding);
     margin-bottom: 0.2rem;
+    
     
     z-index: 1;
     

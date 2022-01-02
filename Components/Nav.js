@@ -8,7 +8,7 @@ const Nav = () => {
         <nav className={navStyles.navbar}>
         <ul className={navStyles.navbarnav}>
           <li className={navStyles.logo}>
-            <a href="/" className={navStyles.navlink}>
+            <a className={navStyles.navlink}>
               <span className={`${navStyles.linktext} ${navStyles.logotext}`}><Image src ={ttpLogo}/></span>
               <svg
                 aria-hidden="true"
@@ -125,7 +125,7 @@ const Nav = () => {
           </li>
 
           <li className={navStyles.navitem}>
-            <a href="https://www.patreon.com/user?u=67002473" class={navStyles.navlink}>
+            <a href="https://www.patreon.com/user?u=67002473" className={navStyles.navlink}>
               <svg
                 aria-hidden="true"
                 focusable="false"

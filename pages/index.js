@@ -1,7 +1,7 @@
 import Meta from '../Components/Meta'
 import VideoList from '../Components/VideoList'
-import StratList from '../Components/StratList'
-import BlogList from '../Components/BlogList'
+import IndiList from '../Components/IndiList'
+import TutorialsList from '../Components/TutorialsList'
 import Robinhood from '../Components/Robinhood'
 import BlockFi from '../Components/BlockFi'
 
@@ -15,9 +15,9 @@ export default function Home({indicators}) {
       
       <VideoList />
       <Robinhood />
-            <StratList indicators={indicators}  />
+      <IndiList indicators={indicators}  />
       <BlockFi />
-      <BlogList />
+      <TutorialsList />
       
     </div>
   )
