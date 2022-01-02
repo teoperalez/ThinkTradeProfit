@@ -8,10 +8,7 @@ import { useState, useEffect } from 'react'
 
 
 export default function Home({indicators}) {
-  const [section, setSection] = useState(1); 
-  
-
-  
+   
 
   return (
     <div>
