@@ -5,8 +5,7 @@ import Image from "next/image";
 
 const Indicator = ({ indi }) => {
   const router = useRouter();
-  const origin = "http://localhost:3000/"; 
-  
+    
     
   return (
     
@@ -31,7 +30,7 @@ const Indicator = ({ indi }) => {
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const indi = await fetch(`http://localhost:3000/api/indicator/${id}`);
+  const indi = await fetch(`https://www.thinktradeprofit.com/api/indicator/${id}`);
   const data = await indi.json();
 
   if (!data) {
