@@ -7,7 +7,7 @@
     
     grid-template-areas: 
         'one one one'
-        'two three four'
+        'three two four'
         'five five five'
         'six six six'
         'seven seven seven'
@@ -21,20 +21,100 @@
 .title {
     grid-area: one;
     max-width: 100%;
+    position:relative;
+    color: var(--clr-neutral-100);
+    width: max-content;
+    max-width: 100%;
+    --padding: 1rem;
+    padding: var(--padding);
+    margin-bottom: 0.2rem;
+    
+    z-index: 1;
+    
+    
 }
 
-.patprice {
+.title::before{
+    content: '';
+    background-color: var(--clr-accent-400);
+    position: absolute;
+    height: 75%;
+    width: 5rem;
+    bottom:0;
+    left: calc(100% + 0.5rem);
+    transform: skewX(20deg);
+    z-index: -2;
+    
+
+
+}
+.title::after {
+    content:'';
+    position: absolute;
+    height: 10px;
+    background: var(--clr-accent-500);
+    width: calc(100% + 3rem);
+    height: 100%;
+    bottom:0;
+    left: -3rem;
+    z-index: -1;
+    transform: skewX(20deg);
+    transition: 200ms ease-in;
+
+}
+.prices {
     grid-area: two;
+    display:flex;
+    flex-direction: row;
+    align-items: left;
+    justify-items: left;
+    margin-bottom: 1rem;
+}
+.patprice {
+    
+    text-align: right;
+    width: max-content;
+    padding: 1rem;
+    transition-duration: 500ms;
+    border-radius: 1rem;
+  box-shadow: 0.1rem 0.2rem 0.3rem var(--clr-neutral-900) ;
+}
+
+.patprice:hover {
+    color: var(--clr-accent-400);
+    font-size: 1.1rem;
 }
 
 .or {
-    grid-area: three;
+   
     margin: auto;
+
 }
 
 .fivprice {
+    
+    padding:1rem;
+    width:max-content;
+    transition-duration: 500ms;
+    border-radius: 1rem;
+  box-shadow: 0.1rem 0.2rem 0.3rem var(--clr-neutral-900) ;
+}
+
+.fivprice:hover {
+    color: var(--clr-accent-400);
+    font-size: 1.1rem;
+}
+
+.fillerl {
+    grid-area: three;
+    text-align: right;
+    margin: auto;
+}
+
+.fillerr {
     grid-area: four;
 }
+
 
 .tags {
     grid-area: five;
@@ -66,6 +146,24 @@
 
 .button {
     grid-area: eleven;
+    width: max-content;
+    justify-self: right;
+    margin-right: 6rem;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    background: var(--clr-accent-400);
+    padding: 0.5rem 3rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    transform-origin: center;
+    transition: all 200ms;
+}
+    
+.button:hover,
+.button:focus {
+    background-color: var(--clr-accent-500);
 }
 
 @media (min-width: 30em) {
@@ -73,7 +171,7 @@
         width: calc(100%-5rem);
         grid-template-areas: 
             'one one eleven'
-            'two three four'
+            'three two four'
             'seven seven seven'
             'five five five'
             'six six six' 
@@ -89,7 +187,7 @@
     .sectiontop {
         grid-template-areas: 
             'one one eleven'
-            'two three four'
+            'three two four'
             'seven seven seven'
             'five five five'
             'six eight eight'
@@ -98,13 +196,14 @@
             ;
 
     }
+   
 }
 
 @media (min-width: 55em) {
     .sectiontop {
         grid-template-areas: 
             'one one eleven'
-            'two three four'
+            'three two four'
             'seven seven seven'
             'five five five'
             'six eight eight'
@@ -112,5 +211,6 @@
             ;
 
     }
+    
 }
 

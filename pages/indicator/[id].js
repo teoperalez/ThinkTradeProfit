@@ -11,11 +11,14 @@ const Indicator = ({ indi }) => {
     
     <div className={indiStyles.sectiontop}>
       <Meta title={"Trading ThinkScripts || " + `${indi.title}`} description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
-      <div className={indiStyles.title}><h1>{indi.title} |</h1></div> 
-      <div className={indiStyles.patprice}><a href="https://www.patreon.com/user?u=67002473"><h1>${indi.patronprice}/mo </h1><p>with Patreon {indi.patronlevel} tier</p></a></div>
-      <div className={indiStyles.or}><h1>OR</h1></div>
-      <div className={indiStyles.fivprice}><a href="https://www.fiverr.com/teoperalez/code-any-thinkscript-indicator-alert-or-strategy?source=order_page_summary_gig_link_image&funnel=0938d61a77d1d602495d1a69a5da3c2d"><h1>${indi.fiverrprice}</h1><p> from Fiverr</p></a></div>
-
+      <div className={indiStyles.title}><h1>{indi.title}</h1></div> 
+      <div className={indiStyles.fillerl}><h2>Get this indicator: </h2></div>
+      <div className={indiStyles.prices}>
+        <div className={indiStyles.patprice}><a href="https://www.patreon.com/user?u=67002473"><h1>${indi.patronprice}/mo </h1><p>with Patreon</p></a></div>
+        <div className={indiStyles.or}><h1>OR</h1></div>
+        <div className={indiStyles.fivprice}><a href="https://www.fiverr.com/teoperalez/code-any-thinkscript-indicator-alert-or-strategy?source=order_page_summary_gig_link_image&funnel=0938d61a77d1d602495d1a69a5da3c2d"><h1>${indi.fiverrprice}</h1><p> from Fiverr</p></a></div>
+      </div>
+      <div className={indiStyles.fillerr}></div>
       
       
         <div className={indiStyles.image}>
@@ -38,8 +41,7 @@ export async function getServerSideProps(context) {
   const { id } = context.params;
   const indi = await fetch(`https://www.thinktradeprofit.com/api/indicator/${id}`);
   const data = await indi.json();
-  console.log(data);
-
+  
   if (!data) {
     return {
       notFound: true
