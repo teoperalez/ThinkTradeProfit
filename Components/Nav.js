@@ -58,7 +58,7 @@ const Nav = () => {
             </a>
           </li>
 
-       cl   <li className={navStyles.navitem}>
+          <li className={navStyles.navitem}>
             <a href="/" className={navStyles.navlink}>
               <svg
                 aria-hidden="true"

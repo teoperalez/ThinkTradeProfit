@@ -3,8 +3,7 @@ import VideoList from '../Components/VideoList'
 import StratList from '../Components/StratList'
 import BlogList from '../Components/BlogList'
 import Robinhood from '../Components/Robinhood'
-import { useState, useEffect } from 'react'
-
+import BlockFi from '../Components/BlockFi'
 
 
 export default function Home({indicators}) {
@@ -16,7 +15,8 @@ export default function Home({indicators}) {
       
       <VideoList />
       <Robinhood />
-      <StratList indicators={indicators}  />
+            <StratList indicators={indicators}  />
+      <BlockFi />
       <BlogList />
       
     </div>
