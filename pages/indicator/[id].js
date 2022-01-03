@@ -2,6 +2,7 @@ import Meta from "../../Components/Meta";
 import indiStyles from "../../styles/Indicator.module.css"
 import { useRouter } from "next/router";
 import Image from "next/image";
+import BlockFi from "../../Components/BlockFi";
 
 const Indicator = ({ indi }) => {
   const router = useRouter();
@@ -32,8 +33,9 @@ const Indicator = ({ indi }) => {
       <h3 className={indiStyles.backtest}>Backtest Results {indi.backtestdates}:</h3>
       <p className={indiStyles.tests}>{indi.backtests}</p>
       <button className={indiStyles.button}onClick={() => router.back()}>Back</button>
-
-      
+      <div className={indiStyles.ad} >
+      <BlockFi />
+      </div>
     </div>
   );
 };

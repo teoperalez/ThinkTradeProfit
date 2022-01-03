@@ -9,7 +9,7 @@
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin-right: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -73,16 +73,17 @@ body {
   color: var(--clr-neutral-900)
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 35rem) {
   body {
     margin: 0;
     width: 100vw;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 35rem) {
   body {
     margin-left: 5rem;
+    margin-right: 6rem;
   }
 }
 

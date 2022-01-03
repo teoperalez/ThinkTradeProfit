@@ -1,33 +1,33 @@
-import Link from 'next/link'
-import headerStyles from '../styles/Header.module.css'
+
+import adStyles from '../styles/Ad.module.css'
 import logo from '../public/robinhood.png'
-import BFlogo from '../public/Blockfi.png'
 import Image from 'next/image'
 
 const Robinhood = () => {
     
     
     return(
-        <div className={headerStyles.container} >
-       <div className={headerStyles.ad}> 
-          <div className={headerStyles.adimg}>
+        <a href="join.robinhood.com/teodorp30" >
+       <h4>ThinkTradeProfit.com is support by:</h4>
+       <div className={adStyles.ad}> 
+          <div className={adStyles.adimg}>
             <Image src={logo} objectPosition="center"/>
             </div>
-          <a href="join.robinhood.com/teodorp30" >
+          
             
             <h1 
             
-            className={headerStyles.description}>
-                <span>Everyone likes free money!</span><br />
-                <span>Robinhood gives free money!</span>
+            className={adStyles.head}>
+                <span>Everyone deserves free stock!</span><br />
+                <span>Get your first share at Robinhood!</span>
             </h1>    
-            <p className={headerStyles.description}>
+            <h3 className={adStyles.description}>
                 Sign up for Robinhood here and get a free stock worth up to $225! 
-            </p>
-        </a>
+            </h3>
+        
 
        </div>
-    </div>
+       </a>
     )
 }
 

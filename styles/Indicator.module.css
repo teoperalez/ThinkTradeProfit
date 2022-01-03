@@ -1,7 +1,9 @@
 .sectiontop {
+    box-sizing: border-box;
     display: -ms-grid;
     display: grid;
     overflow: hidden;
+    max-width: 100%;
     -ms-grid-columns: 33%;
     grid-auto-columns: 1fr;
     
@@ -15,7 +17,8 @@
     'nine nine nine'
     'ten eleven eleven'
     'twelve twelve twelve'
-    'four four five';
+    'four four five'
+    'thirteen thirteen thirteen';
 
     gap: 1rem;
     margin: 1rem 1rem 1rem 1rem;
@@ -189,6 +192,10 @@
     background-color: var(--clr-accent-500);
 }
 
+.ad {
+    grid-area: thirteen;
+}
+
 @media (min-width: 30em) {
     .sectiontop {
         width: calc(100%-5rem);
@@ -203,8 +210,8 @@
         'ten eleven eleven '
         'four four five'
         'twelve twelve twelve'
+        'thirteen thirteen thirteen'
             ;
-
     }
     .prices {
         flex-direction: row;
@@ -224,7 +231,27 @@
         'nine nine nine'
         'ten eleven eleven '
         'four four five'
-        'twelve twelve twelve';
+        'twelve twelve twelve'
+        'thirteen thirteen thirteen';
+    margin-right: 6rem;
+    }
+   
+}
+
+@media (min-width: 40em) {
+    .sectiontop {
+        grid-template-areas: 
+        'one one one'
+        'two two two'
+        'three three three'
+        'seven seven seven'
+        'six six six'
+        'eight eight eight'
+        'nine nine nine'
+        'ten eleven eleven '
+        'four four five'
+        'twelve twelve twelve'
+        'thirteen thirteen thirteen';
 
     }
    
@@ -239,7 +266,8 @@
         'six six six'
         'seven eight eight'
         'seven nine nine'
-        'seven ten eleven ';
+        'seven ten eleven '
+        'thirteen thirteen thirteen';
             
 
     }

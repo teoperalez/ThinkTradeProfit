@@ -11,8 +11,7 @@ const VideoList = () => {
         <div>
             <h1 className={videoStyles.title}>Thoughts</h1>
             <div className={videoStyles.contents}>
-            <button className={`${videoStyles.carouselbutton} ${videoStyles.leftbutton}`}>&#8656;</button>
-            <button className={`${videoStyles.carouselbutton} ${videoStyles.rightbutton}`}>&#8658;</button>
+            
             <div id = "1" className={videoStyles.card} style={{ backgroundImage: `url(../public\How_to_backtest_a_trading_strategy.jpg)` }}>
             <div className={videoStyles.playbutton}>
                 
