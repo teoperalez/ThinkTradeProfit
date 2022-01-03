@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 
 const StratList = ({indicators}) => {
-
+    
     return (
         <div className={indiStyles.sectiontop}>
             <h1 className={indiStyles.title}>Indicators</h1>
