@@ -160,7 +160,6 @@ const Nav = () => {
               <span className={navStyles.linktext}>Hire Me!</span>
             </a>
           </li>
-    
         </ul>
       </nav>
     )

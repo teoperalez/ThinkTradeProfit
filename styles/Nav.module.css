@@ -2,7 +2,7 @@
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 600ms ease;
-    overflow: scroll;
+    overflow: hidden;
     margin: 0;
     z-index: 1000;
     left:0;

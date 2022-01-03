@@ -12,7 +12,8 @@ const Indicator = ({ indi }) => {
     <div className={indiStyles.sectiontop}>
       <Meta title={"Trading ThinkScripts || " + `${indi.title}`} description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
       <div className={indiStyles.title}><h1>{indi.title}</h1></div> 
-      <div className={indiStyles.fillerl}><h2>Get this indicator: </h2></div>
+      <h2 className={indiStyles.get}>Get this indicator: </h2>
+      <div className={indiStyles.fillerl}></div>
       <div className={indiStyles.prices}>
         <div className={indiStyles.patprice}><a href="https://www.patreon.com/user?u=67002473"><h1>${indi.patronprice}/mo </h1><p>with Patreon</p></a></div>
         <div className={indiStyles.or}><h1>OR</h1></div>
