@@ -2,6 +2,7 @@ import styles from '../styles/Layout.module.css'
 import Nav from './Nav'
 import Header from './Header'
 import CTA from './CTA'
+import Footer from './Footer'
 
 
 
@@ -17,7 +18,7 @@ const Layout = ({children}) => {
             </main>
             
             <CTA className={styles.cta} />
-            <div className={styles.footer}></div>
+            <Footer />
         </div>
     )
 

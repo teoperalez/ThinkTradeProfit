@@ -5,7 +5,7 @@ import Image from "next/image";
 import BlockFi from "../../Components/BlockFi";
 import ShortDisclaimer from "../../Components/ShortDisclaimer";
 
-const Indicator = ({ indi }) => {
+const Video = ({ indi }) => {
   const router = useRouter();
     
     
@@ -60,4 +60,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default Indicator;
+export default Video;

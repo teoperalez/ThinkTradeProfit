@@ -1,11 +1,10 @@
 import videoStyles from '../styles/Video.module.css'
-import { useState } from 'react';
 import Link from 'next/link'
-import Image from 'next/image';
 
 
 
-const VideoList = () => {
+
+const ThoughtList = () => {
     return (
         
         <div>
@@ -52,4 +51,4 @@ const VideoList = () => {
     )
 }
 
-export default VideoList
+export default ThoughtList

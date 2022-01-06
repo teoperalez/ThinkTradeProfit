@@ -68,3 +68,27 @@
   margin-bottom: 5rem;
 }
 
+.footernav {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footernav ul {
+  list-style: none;
+  display: flex;
+}
+
+.footernav ul li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 35rem) {
+  .footernav {
+    margin-bottom: 6rem;
+  }
+}

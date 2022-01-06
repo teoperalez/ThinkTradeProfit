@@ -1,0 +1,24 @@
+  .disclaimer {
+    margin: 3rem 3rem 3rem 1rem;
+    line-height: 1.5;
+    font-size: 2rem;
+    max-width: 100%;
+
+  }
+
+  .smalldisclaimer {
+    font-size: x-small;
+  }
+
+  @media (max-width: 35rem) {
+    .disclaimer {
+      margin-right: 1rem;
+      
+    }
+  }
+ 
+
+
+
+
+
