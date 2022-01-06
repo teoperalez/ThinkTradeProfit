@@ -14,6 +14,7 @@ const Video = ({ indi }) => {
     <div className={indiStyles.sectiontop}>
       <Meta title={"Trading ThinkScripts || " + `${indi.title}`} description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
       <div className={indiStyles.title}><h1>{indi.title}</h1></div> 
+      <iframe width="560" height="315" src={`"https://www.youtube.com/embed/"+${indi.slug}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <h2 className={indiStyles.get}>Get this indicator: </h2>
       <div className={indiStyles.fillerl}></div>
       <div className={indiStyles.prices}>
