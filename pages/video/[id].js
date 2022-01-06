@@ -46,7 +46,7 @@ const Video = ({ indi }) => {
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const indi = await fetch(`https://www.thinktradeprofit.com/api/indicator/${id}`);
+  const indi = await fetch(`https://www.thinktradeprofit.com/api/video/${id}`);
   const data = await indi.json();
   
   if (!data) {

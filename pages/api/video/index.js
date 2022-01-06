@@ -1,4 +1,4 @@
-import { data } from "../../../indidata";
+import { data } from "../../../viddata";
 
 export default function handler(request, response) {
   const { method } = request;

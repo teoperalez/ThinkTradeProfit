@@ -2,7 +2,7 @@ export const data = [
     {
       id: 1,
       title: "Make Better Charts - RSI + Bollinger Bands + MACD + 200EMA with Colored Bars",
-  
+      slug: "Zc4_kujRS-Y",
       list: "tutorial",
       description: "A ThinkScript Tutorial for Adding Colored Bars based on a Combined Study set",
       image: "Tutorial1.jpg",
