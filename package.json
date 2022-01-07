@@ -19,7 +19,10 @@
     "react-dom": "17.0.2",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
-    "tailwindcss": "^3.0.11"
+    "remark-parse": "^10.0.1",
+    "remark-react": "^9.0.1",
+    "tailwindcss": "^3.0.11",
+    "unified": "^10.1.1"
   },
   "devDependencies": {
     "eslint": "8.4.1",
