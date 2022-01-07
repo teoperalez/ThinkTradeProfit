@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import Container from '../../components/container'
-import PostBody from '../../components/post-body'
-import BlogHeader from '../../components/blogheader'
-import PostHeader from '../../components/post-header'
-import BlogLayout from '../../components/bloglayout'
+import Container from '../../Components/Container'
+import PostBody from '../../Components/Post-body'
+import BlogHeader from '../../Components/Blogheader'
+import PostHeader from '../../Components/Post-header'
+import BlogLayout from '../../Components/Bloglayout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
+import PostTitle from '../../Components/Post-title'
 import markdownToHtml from '../../lib/markdownToHtml'
 
 export default function Post({ post, morePosts, preview }) {
