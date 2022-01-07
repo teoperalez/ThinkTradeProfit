@@ -66,6 +66,12 @@
     min-width: 2rem;
     margin: 0 1.5rem;
   }
+
+  .lightbulb {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+  }
   
   .faprimary {
     color: var(--clr-accent-500);
@@ -172,6 +178,11 @@
     
 
     
+  }
+
+  .lightbulb {
+    width: 2rem;
+    height: 2rem;
   }
   
   /* Large screens */

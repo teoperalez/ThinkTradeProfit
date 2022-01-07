@@ -37,7 +37,7 @@ const Nav = () => {
           </li>
     
           <li className={navStyles.navitem}>
-            <a href="#thoughts" className={navStyles.navlink}>
+            <a href="/blog" className={navStyles.navlink}>
             
               <svg 
                 aria-hidden="true"
