@@ -1,6 +1,6 @@
 import styles from '../styles/Disclaimer.module.css'
 
-const LongDisclaimer = () => {
+export default function LongDisclaimer() {
 
     return ( 
         <div className = {styles.disclaimer}>
@@ -16,5 +16,3 @@ const LongDisclaimer = () => {
         </div>
     );
 }
-
-export default LongDisclaimer
