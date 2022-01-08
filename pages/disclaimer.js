@@ -1,5 +1,5 @@
 import styles from '../styles/Disclaimer.module.css'
-import LongDisclaimer from '../Components/lsongdisclaimer';
+import LongDisclaimer from '../Components/longdisclaimer';
 
 const Disclaimer = () => {
 
