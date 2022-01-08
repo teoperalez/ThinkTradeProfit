@@ -1,4 +1,4 @@
-import Meta from "../../Components/maiinmeta";
+import MainMeta from "../../Components/mainmeta";
 import indiStyles from "../../styles/Indicator.module.css"
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -12,7 +12,7 @@ const Indicator = ({ indi }) => {
   return (
     
     <div className={indiStyles.sectiontop}>
-      <Meta title={"Trading ThinkScripts || " + `${indi.title}`} description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
+      <MainMeta title={"Trading ThinkScripts || " + `${indi.title}`} description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
       <div className={indiStyles.title}><h1>{indi.title}</h1></div> 
       <h2 className={indiStyles.get}>Get this indicator: </h2>
       <div className={indiStyles.fillerl}></div>

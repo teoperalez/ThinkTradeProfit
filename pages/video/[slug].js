@@ -1,4 +1,4 @@
-import Meta from "../../Components/mainmeta";
+import MainMeta from "../../Components/mainmeta";
 import vidStyles from "../../styles/VideoPage.module.css"
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -13,7 +13,7 @@ const Video = ({ indi }) => {
   return (
     
     <div className={vidStyles.sectiontop}>
-      <Meta title={"Trading ThinkScripts || " + `${indi.title}`} description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
+      <MainMeta title={"Trading ThinkScripts || " + `${indi.title}`} description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting"/>
       <div className={vidStyles.title}><h1>{indi.title}</h1></div> 
       <div className={vidStyles.video}>
         <iframe width="1000" height="700" src={embed} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
