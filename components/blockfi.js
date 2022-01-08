@@ -1,9 +1,8 @@
-import Link from 'next/link'
 import adStyles from '../styles/Ad.module.css'
 import BFlogo from '../public/Blockfi.png'
 import Image from 'next/image'
 
-const BlockFi = () => {
+export default function BlockFi () {
     
     
     return(
@@ -28,5 +27,3 @@ const BlockFi = () => {
       </div>
     )
 }
-
-export default BlockFi
