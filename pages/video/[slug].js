@@ -1,9 +1,9 @@
-import Meta from "../../Components/Meta";
+import Meta from "../../Components/mainmeta";
 import vidStyles from "../../styles/VideoPage.module.css"
 import { useRouter } from "next/router";
 import Image from "next/image";
-import BlockFi from "../../Components/BlockFi";
-import ShortDisclaimer from "../../Components/ShortDisclaimer";
+import BlockFi from "../../components/blockfi";
+import ShortDisclaimer from "../../Components/shortdisclaimer";
 import Link from "next/link";
 
 const Video = ({ indi }) => {
