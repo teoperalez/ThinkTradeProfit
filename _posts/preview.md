@@ -1,11 +1,11 @@
 ---
 title: 'Make Better Charts  RSI + Bollinger Bands + MACD + 200EMA w/ Colored Bars'
-excerpt: "It doesn't have to be hard to read the chart when you have multiple indicators and complex strategy rules. By using the method shown in this tutorial, you can make any chart instantly more readable and more actionable!"
+excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/blog/preview/Cover.jpg'
 date: '2022-01-06T05:35:07.322Z'
 author:
   name: Teo Peralez || ThinkScrIpt Tutorial Series || ThinkTradeProfit.com
-  picture: '/TTP-Logo-3.ico'
+  picture: '/assets/blog/preview/Cover.jpg'
 ogImage:
   url: '/assets/blog/preview/Cover.jpg'
 ---
