@@ -1,4 +1,9 @@
 
+import Container from '../Components/Container'
+import MoreStories from '../Components/MoreStories'
+import HeroPost from '../Components/Hero-post'
+import Intro from '../Components/Intro'
+import BlogLayout from '../Components/Bloglayout'
 import { getAllPosts } from '../lib/api'
 
 
