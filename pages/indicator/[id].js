@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import PageMeta from "../../components/pagemeta";
 import BlockFi from "../../components/BlockFi";
+import SDisc from "../../components/Sdisc";
 
 
 const Indicator = ({ indi }) => {
@@ -39,7 +40,7 @@ const Indicator = ({ indi }) => {
         <BlockFi />
       </div>
       <div className={indiStyles.disclaimer}>
-        
+        <SDisc />
       </div>
     </div>
   );
