@@ -1,5 +1,5 @@
 import styles from '../styles/Layout.module.css'
-import Nav from './nav'
+import Nav from './Nav'
 import Header from './MainHeader'
 import CTA from './CTA'
 import Footer from './MainFooter'
