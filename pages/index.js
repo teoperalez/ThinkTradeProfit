@@ -13,7 +13,7 @@ export default function Home({indicators}) {
       <PageMeta title="Trading ThinkScripts || Top" description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting" /> 
       <ThoughtList />
       <BlockFi />
-      <IndiList indicators = {indicators}/>
+      <IndiList />
       <Robinhood />
       <TutorialsList />
       
