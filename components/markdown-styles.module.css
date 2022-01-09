@@ -1,5 +1,10 @@
 .markdown {
   @apply text-lg leading-relaxed;
+  --clr-neutral-900: hsl(193, 70%, 21%);
+  --clr-neutral-700: hsl(193, 36%, 40%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-accent-400: hsl(193, 72%, 50%);
+  --clr-accent-500: hsl(49, 72%, 50%);
 }
 
 .markdown p,
@@ -15,4 +20,26 @@
 
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown li ul li {
+  list-style-type: disc;
+  margin-left: 3rem;
+}
+
+.markdown a {
+  color: var(--clr-neutral-700);
+  font-weight: bold;;
+}
+
+.markdown a:hover {
+  color: var(--clr-accent-500);
+}
+
+.markdown code {
+  color:darkgreen;
+  display:flex;
+  margin:0;
+  padding:0;
+  line-height: 0em;
 }

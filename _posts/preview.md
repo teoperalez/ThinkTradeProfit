@@ -10,17 +10,19 @@ ogImage:
   url: '/assets/blog/preview/cover.jpg'
 ---
 
-_In today&#39;s tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals. This example will use the Bollinger Bands and RSI for reversal signals, the MACD and Middle Line of the Bollinger Bands for trend-following entry signals, and a 200-period Exponential Moving Average (EMA) to filter out counter-trend signals._
+### _In today&#39;s tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals. 
 
-# Imagine this simple strategy....
+This example will use the Bollinger Bands and RSI for reversal signals, the MACD and Middle Line of the Bollinger Bands for trend-following entry signals, and a 200-period Exponential Moving Average (EMA) to filter out counter-trend signals._
+
+## ***Imagine this simple strategy....***
 
 We want to trade with the trend of the 200-period EMA. We are using the RSI and Bollinger Bands for reversal signals and the MACD and Bollinger Bands Middle-line for entry signals.
 
-- **In an UPTREND...**
+- In an UPTREND...
   - We look for long trades when the **RSI is oversold** _and_ **price closes BELOW the Lower Bollinger Band**.
   - We take long trades when **price crosses ABOVE the Middle Line of the Bollinger Bands** _and_ **the MACD Line is ABOVE the Signal Line**.
 
-- **In a DOWNTREND...**
+- In a DOWNTREND...
   - We look for short trades when the **RSI is overbought** _and_ **price closes ABOVE the Upper Bollinger Band**.
   - We take short trades when **price crosses BELOW the Middle Line of the Bollinger Bands** _and_ **the MACD Line is BELOW the Signal Line**.
 
@@ -32,97 +34,77 @@ Be honest... Which one do you think is easier to read, back-test, and execute?
 
 Uptrend Example
 
-![](../public/assets/blog/preview/cover.jpg)
+![](/assets/blog/preview/UptrendEx.png)
 
 Downtrend Example
 
-![](../public/assets/blog/preview/Cover.jpg)
+![](/assets/blog/preview/DowntrendEx.png)
 
 The chart on the right is the hands down winner. Referring back to our strategy:
 
 - **In an UPTREND...**
-  - RSI OverSold + Close below Lower BB = **Light Blue Candle**
-  - BB MidLine Cross Up + Positive MACD = **Green Candle**
+  - RSI OverSold + Close below Lower BB = ***Light Blue Candle***
+  - BB MidLine Cross Up + Positive MACD = ***Green Candle***
 
 - **In a DOWNTREND...**
-  - RSI Overbought + Close above Upper BB = **Red Candle**
-  - BB Midline Cross Down + Negative MACD = **Pink Candle**
+  - RSI Overbought + Close above Upper BB = ***Red Candle***
+  - BB Midline Cross Down + Negative MACD = ***Pink Candle***
 
 _When we have no signal, the candles are gray. We know we can move on to the next chat in our watchlist._
 
 With these simple color=codes. Every rule of our strategy is represented clearly at a glance. There is less temptation to jump into trades too early, and it is easy even for the newest trader to follow te strategy clearly.
 
-# But making this chart must be hard.... Right?
+## ***But making this chart must be hard.... Right?***
 
-In fact, it&#39;s incredibly simple! A little copy/paste is enough to get started, and from there, there are only a couple of lines of code. Let&#39;s get into it!
+### In fact, it&#39;s incredibly simple! A little copy/paste is enough to get started, and from there, there are only a couple of lines of code. Let&#39;s get into it!
 
 Let&#39;s start with come basic code: [http://tos.mx/dhFH0LN](http://tos.mx/dhFH0LN)
 
 The above link will allow you to directly download the starting code, which includes all 4 of our indicators. Here&#39;s a breakdown of the code:
-
-#MACD inputs
-
-input fastlength = 9;
-
-input slowlength = 26;
-
-input MACDlength = 12;
-
-#RSI inputs
-
-input RSILength = 6;
-
-input RSIaveragetype = AverageType.WILDERS;
-
-input RSIprice = close;
-
-input RSIOverbought = 70;
-
-input RSIOversold = 30;
-
-#Collinger Bands Inputs
-
-input BBLength = 20;
-
-input STDUp = 2.0;
-
-input STDdown = -2.0;
-
-input BBAverageType = AverageType.SIMPLE;
-
-input BBprice = hlc3;
-
-#200-period EMA inputs
-
-input filterlength = 200;
-
-input filterprice = close;
-
-input filteraveragetype = AverageType.EXPONENTIAL;
-
-input usefilter = yes;
-
-input showlines = yes;
-
-def Value = MACD(fastlength, slowlength, MACDlength).value; #This is the MACD Line
-
-def AVg = MACD(fastlength, slowlength, MACDlength).Avg; # This is the Signal Line
-
-def Diff = MACD(fastlength, slowlength, MACDlength).Diff;#This is the MACD Histogram
-
-def RSI = RSI(price = RSIprice, length = RSILength, averagetype = RSIaveragetype); #This is the RSI
-
-plot Midline = MovingAverage(BBAverageType, BBprice, BBLength); #This is the Middle Line of Bollinger Bands
-
-plot Lowerline = Midline + StDev(BBprice, BBLength) \* STDdown; #The Lower Bollinger Band
-
-plot Upperline = Midline + StDev(BBprice, BBLength) \* STDUp; #The Upper BollingerBands Band
-
-plot filterline = if usefilter then MovingAverage(filteraveragetype, filterprice, filterlength) else 0; #Here is the 200-period EMA
+ 
+  
+`#MACD inputs`  
+`input fastlength = 9;`  
+`input slowlength = 26;`  
+`input MACDlength = 12;`  
+`#RSI inputs`  
+`input RSILength = 6;`  
+`input RSIaveragetype = AverageType.WILDERS;`  
+`input RSIprice = close;`  
+`input RSIOverbought = 70;`  
+`input RSIOversold = 30;`  
+`#Bollinger Bands Inputs`  
+`input BBLength = 20;`  
+`input STDUp = 2.0;`  
+`input STDdown = -2.0;`  
+`input BBAverageType = AverageType.SIMPLE;`  
+`input BBprice = hlc3;`  
+`#200-period EMA inputs`  
+`input filterlength = 200;`  
+`input filterprice = close;`  
+`input filteraveragetype = AverageType.EXPONENTIAL;`  
+`input usefilter = yes;`  
+`def Value = MACD(fastlength, slowlength, MACDlength).value;`  
+`#This is the MACD Line`  
+`def AVg = MACD(fastlength, slowlength, MACDlength).Avg;`  
+`# This is the Signal Line`  
+`def Diff = MACD(fastlength, slowlength, MACDlength).Diff;`  
+`#This is the MACD Histogram`  
+`def RSI = RSI(price = RSIprice, length = RSILength, averagetype =`  
+`RSIaveragetype); #This is the RSI`  
+`plot Midline = MovingAverage(BBAverageType, BBprice, BBLength);`  
+`#This is the Middle Line of Bollinger Bands`  
+`plot Lowerline = Midline + StDev(BBprice, BBLength) \* STDdown;`  
+`#The Lower Bollinger Band`  
+`plot Upperline = Midline + StDev(BBprice, BBLength) \* STDUp;`  
+`#The Upper Bollinger Band`  
+`plot filterline = if usefilter then MovingAverage(`  
+`filteraveragetype, filterprice, filterlength) else 0;`  
+`#Here is the 200-period EMA`  
 
 All you need to do is save the study and you should have this output:
 
-TICKER: SPY | Daily Chart, Sept. 2021 – Jan 2022. ![Shape1](../public/assets/blog/preview/Cover.jpg)
+TICKER: SPY | Daily Chart, Sept. 2021 – Jan 2022. ![](/assets/blog/preview/BBEMA.png)
 
 The Bollinger Bands and 200-period EMA are now on our chart! ...But what about the RSI and MACD?
 
