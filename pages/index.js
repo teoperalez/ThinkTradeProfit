@@ -1,8 +1,8 @@
 import PageMeta from '../components/pagemeta'
-import ThoughtList from '../Components/ThoughtList'
-import IndiList from '../Components/IndiList'
-import TutorialsList from '../Components/TutorialsList'
-import Robinhood from '../Components/Robinhood'
+import ThoughtList from '../Components/thoughtlist'
+import IndiList from '../Components/indilist'
+import TutorialsList from '../Components/tutorialslist'
+import Robinhood from '../Components/robinhood'
 import BlockFi from '../Components/BlockFi'
 
 

@@ -3,7 +3,7 @@ import indiStyles from "../../styles/Indicator.module.css"
 import { useRouter } from "next/router";
 import Image from "next/image";
 import BlockFi from "../../Components/BlockFi";
-import ShortDisclaimer from "../../Components/ShortDisclaimer";
+import ShortDisclaimer from "../../Components/shortdisclaimer";
 
 const Indicator = ({ indi }) => {
   const router = useRouter();

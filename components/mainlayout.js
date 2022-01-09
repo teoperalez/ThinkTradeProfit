@@ -1,8 +1,8 @@
 import styles from '../styles/Layout.module.css'
-import Nav from './Nav'
-import Header from './MainHeader'
-import CTA from './CTA'
-import Footer from './MainFooter'
+import Nav from './nav'
+import Header from './mainheader'
+import CTA from './cta'
+import Footer from './mainfooter'
 
 
 
