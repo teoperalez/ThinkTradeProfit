@@ -1,11 +1,11 @@
 import styles from '../styles/Disclaimer.module.css'
-import LongDisclaimer from '../components/longdisclaimer';
+import LongDisclaimer from '../components/LongDisclaimer';
 
 const Disclaimer = () => {
 
     return(
        <div className={styles.disclaimer}>
-        <LongDisclaimer />    
+        <LongDisclaimer /> LEt's try   
        </div>
     );
 }

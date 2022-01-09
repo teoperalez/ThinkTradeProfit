@@ -4,6 +4,7 @@ const LongDisclaimer = () => {
 
     return ( 
         <div className = {styles.disclaimer}>
+            Test
             <h1>Risk Warning</h1>
 
                 <p>Before deciding to participate in the financial markets, you should carefully consider your investment objectives, level of experience and risk appetite. Most importantly, do not invest money you cannot afford to lose.</p>
