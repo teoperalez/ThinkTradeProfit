@@ -1,4 +1,4 @@
-import Meta from "../../../components/MainMeta"
+import Meta from "../../../components/Meta"
 import Link from "next/link"
 
 const Article = ({article}) => {

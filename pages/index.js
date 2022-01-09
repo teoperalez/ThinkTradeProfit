@@ -1,4 +1,4 @@
-import Meta from '../components/MainMeta'
+import Meta from '../components/Meta'
 import ThoughtList from '../Components/ThoughtList'
 import IndiList from '../Components/IndiList'
 import TutorialsList from '../Components/TutorialsList'
