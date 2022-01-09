@@ -1,6 +1,6 @@
 import PageMeta from '../components/pagemeta'
 import TutorialsList from '../components/tutorialslist';
-
+import ThoughtList from '../components/thoughtlist';
 
 
 export default function Home({indicators}) {
@@ -9,6 +9,7 @@ export default function Home({indicators}) {
   return (
     <div>
       <PageMeta title="Trading ThinkScripts || Top" description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting" /> 
+      <ThoughtList />
       <TutorialsList />
       
       
