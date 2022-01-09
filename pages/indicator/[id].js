@@ -2,6 +2,8 @@
 import indiStyles from "../../styles/Indicator.module.css"
 import { useRouter } from "next/router";
 import Image from "next/image";
+import PageMeta from "../../components/pagemeta";
+import BlockFi from "../../components/BlockFi";
 
 
 const Indicator = ({ indi }) => {
@@ -11,7 +13,8 @@ const Indicator = ({ indi }) => {
   return (
     
     <div className={indiStyles.sectiontop}>
-      
+      <PageMeta title="Trading ThinkScripts || Top" description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting" /> 
+ 
       <div className={indiStyles.title}><h1>{indi.title}</h1></div> 
       <h2 className={indiStyles.get}>Get this indicator: </h2>
       <div className={indiStyles.fillerl}></div>
@@ -34,7 +37,7 @@ const Indicator = ({ indi }) => {
       <p className={indiStyles.tests}>{indi.backtests}</p>
       <button className={indiStyles.button}onClick={() => router.back()}>Back</button>
       <div className={indiStyles.ad} >
-        
+        <BlockFi />
       </div>
       <div className={indiStyles.disclaimer}>
         
