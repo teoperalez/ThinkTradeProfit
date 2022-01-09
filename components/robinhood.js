@@ -1,4 +1,3 @@
-
 import adStyles from '../styles/Ad.module.css'
 import logo from '../public/robinhood.png'
 import Image from 'next/image'

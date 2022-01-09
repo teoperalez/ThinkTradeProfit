@@ -2,7 +2,8 @@ import PageMeta from '../components/pagemeta'
 import TutorialsList from '../components/tutorialslist';
 import ThoughtList from '../components/thoughtlist';
 import BlockFi from '../components/BlockFi';
-
+import IndiList from '../Components/IndiList';
+import Robinhood from '../components/robinhood';
 
 export default function Home({indicators}) {
    
@@ -12,6 +13,8 @@ export default function Home({indicators}) {
       <PageMeta title="Trading ThinkScripts || Top" description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting" /> 
       <ThoughtList />
       <BlockFi />
+      <IndiList indicators = {indicators}/>
+      <Robinhood />
       <TutorialsList />
       
       

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 
-const StratList = ({indicators}) => {
+export default function IndiList({indicators})  {
     
     return (
         <div className={indiStyles.sectiontop}>
@@ -31,7 +31,5 @@ const StratList = ({indicators}) => {
             ))}
             </div>
         </div>
-    )
-}
-
-export default StratList
+    );
+};
