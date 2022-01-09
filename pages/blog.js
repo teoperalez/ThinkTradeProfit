@@ -1,9 +1,4 @@
-
-import Container from '../Components/Container'
-import MoreStories from '../Components/MoreStories'
-import HeroPost from '../Components/Hero-post'
-import Intro from '../Components/Intro'
-import BlogLayout from '../Components/Bloglayout'
+import BLayout from '../components/BLayout'
 import { getAllPosts } from '../lib/api'
 
 
@@ -13,6 +8,9 @@ export default function Blog({ allPosts }) {
   const morePosts = allPosts.slice(1)
   return (
     <>
+    <BLayout>
+      
+    </BLayout>
       
     </>
   )
