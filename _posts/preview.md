@@ -1,13 +1,13 @@
 ---
 title: 'Make Better Charts  RSI + Bollinger Bands + MACD + 200EMA w/ Colored Bars'
 excerpt: 'In todays tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals. This example will use the Bollinger Bands and RSI for reversal signals, the MACD and Middle Line of the Bollinger Bands for trend-following entry signals, and a 200-period Exponential Moving Average (EMA) to filter out counter-trend signals.'
-coverImage: '/assets/blog/preview/Cover.jpg'
+coverImage: '/assets/blog/preview/cover.jpg'
 date: '2022-01-06T05:35:07.322Z'
 author:
   name: Teo Peralez || ThinkScrIpt Tutorial Series || ThinkTradeProfit.com
   picture: '/Banner.jpg'
 ogImage:
-  url: '/assets/blog/preview/Cover.jpg'
+  url: '/assets/blog/preview/cover.jpg'
 ---
 
 _In today&#39;s tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals. This example will use the Bollinger Bands and RSI for reversal signals, the MACD and Middle Line of the Bollinger Bands for trend-following entry signals, and a 200-period Exponential Moving Average (EMA) to filter out counter-trend signals._
@@ -32,7 +32,7 @@ Be honest... Which one do you think is easier to read, back-test, and execute?
 
 Uptrend Example
 
-![](../public/assets/blog/preview/Cover.jpg)
+![](../public/assets/blog/preview/cover.jpg)
 
 Downtrend Example
 
