@@ -1,0 +1,299 @@
+# http://thinkscripter.wordpress.com  
+
+  
+
+# thinkscripter@gmail.com  
+
+  
+
+# Last Update 18 JUL 2009  
+
+  
+
+#Extend Bars functionality added and delivered by Teo Peralez teoperalez@gmail.com ThinkTradeProfit.com  
+
+  
+
+###This inputs allows you to adjust the number of bars to extend the Globex High and Globex low lines  
+
+input Globex_extendbars = 10; 
+
+#Sets the uber of bars to extend the Fib lines 
+
+input Fib_extendbars = 0; 
+
+  
+
+#The next two inputs determine if you would like to also extend previous day's lines.   They will be calculated with the same number of bars as the current-day lines.    
+
+input Prev_Globex_extendbars = yes; 
+
+input Prev_Fib_extendbars = no; 
+
+  
+
+  
+
+input Globex_Open = 1600;  
+
+  
+
+input Globex_Close = 1200;  
+
+  
+
+  
+
+  
+
+def dn= double.nan;  
+
+  
+
+input showCurrentLines = yes;  
+
+  
+
+input showPrevLines = no;  
+
+  
+
+  
+
+  
+
+def globexOpen = if(secondsFromTime(Globex_Open) >= 0 or secondsTillTime(Globex_Close)>=0, 1, 0);  
+
+  
+
+def globexReset = if globexOpen and !globexOpen[1] then 1 else 0;  
+
+  
+
+  
+
+  
+
+rec globexHigh = compoundValue(1, if((high > globexHigh[1] and globexOpen) or globexReset, high,globexHigh[1]),high);  
+
+  
+
+rec globexLow  = compoundValue(1, if((low < globexLow[1] and globexOpen) or globexReset, low,globexLow[1]),low);  
+
+  
+
+  
+
+  
+
+input plot_start= 0400;  
+
+  
+
+input plot_end  = 0600;  
+
+  
+
+#Here, we are getting the current candle of the plot enting time 
+
+def globexclosebar = if secondsTillTime(plot_end)==0 then barnumber() else globexclosebar[1]; 
+
+  
+
+#This sets teh last bar to show the Globex plots 
+
+def extendbar = globexclosebar + Globex_extendbars; 
+
+  
+
+#This sets the last bar to show the Fib line plots 
+
+def fextendbar = globexclosebar + Fib_extendbars; 
+
+  
+
+#These determine if the current bar is after the end of the extended bars period.    
+
+def globexfinish = barnumber() > extendbar; 
+
+def fibfinish = barnumber() > fextendbar; 
+
+  
+
+def plotTime = secondsFromTime(plot_start) >= 0 and secondsTillTime(plot_end)>=0;  
+
+  
+
+def na = double.nan;  
+
+  
+
+  
+
+####Each plot from here adds to the if condition a check for if the finish bar has come, and will keep the old value until then.    
+
+def GHigh =  if !showCurrentLines then dn else if !globexfinish then Ghigh[1] else if !plotTime then na else globexHigh;     
+
+def GLow =  if !showCurrentLines then dn else if !globexfinish then GLow[1] else if !plotTime then na else  globexLow;   
+
+  
+
+###This plots the data above    
+
+plot Globex_High = Ghigh; 
+
+Globex_high.SetStyle(curve.SHORT_DASH);    Globex_High.SetDefaultColor(color.pink); Globex_High.setLineWeight(2);  
+
+plot Globex_Low =  GLow; 
+
+  
+
+  
+
+  
+
+def distanc = globexHigh-globexLow;  
+
+  
+
+input fib_percent_1 = 23.6;  
+
+  
+
+input fib_percent_2 = 38.2;  
+
+  
+
+input fib_percent_3 = 50.0;  
+
+  
+
+input fib_percent_4 = 61.8;  
+
+  
+
+input fib_percent_5 = 75;  
+
+  
+
+###Same edits for each of the Fib lines 
+
+def f1= if !showCurrentLines then dn else  if !fibfinish then f1[1] else if !plotTime then na else    Globex_Low+distanc*(fib_percent_1/100); 
+
+plot fib_1= f1;    fib_1.SetStyle(curve.SHORT_DASH);    fib_1.SetDefaultColor(color.white);  
+
+  
+
+def f2= if !showCurrentLines then dn else if !fibfinish then f2[1] else  if !plotTime then na else   Globex_Low+distanc*(fib_percent_2/100);    
+
+plot fib_2=f2; fib_2.SetStyle(curve.SHORT_DASH);    fib_2.SetDefaultColor(color.white);  
+
+  
+
+def f3= if !showCurrentLines then dn else if !fibfinish then f3[1] else if !plotTime then na else    Globex_Low+distanc*(fib_percent_3/100); 
+
+plot fib_3= f3;    fib_3.SetStyle(curve.SHORT_DASH);    fib_3.SetDefaultColor(color.white);  
+
+  
+
+def f4= if !showCurrentLines then dn else if !fibfinish then f4[1] else if !plotTime then na else    Globex_Low+distanc*(fib_percent_4/100); 
+
+plot fib_4= f4;    fib_4.SetStyle(curve.SHORT_DASH);    fib_4.SetDefaultColor(color.white);  
+
+  
+
+def f5= if !showCurrentLines then dn else if secondsfromtime(plot_end)>=0 and !fibfinish then f5[1] else if !plotTime then na else    Globex_Low+distanc*(fib_percent_5/100); 
+
+plot fib_5= f5;    fib_5.SetStyle(curve.SHORT_DASH);    fib_5.SetDefaultColor(color.white);  
+
+  
+
+  
+
+  
+
+## Logic for previous data is plotted in the same way as the current day data, but can be turned off with the yes/no inputs from the top.   ===============   
+
+  
+
+rec globexHigh_prev = if globexReset then globexHigh[1] else globexHigh_prev[1];  
+
+  
+
+rec globexLow_prev = if globexReset then globexLow[1] else globexLow_prev[1];  
+
+  
+
+  
+
+  
+
+def allowed = showPrevLines and globexHigh_prev!=0;  
+
+  
+
+  
+
+  
+
+def GHigh_prev = if !allowed then dn else if Prev_Globex_extendbars and !globexfinish then GHigh_prev[1] else if !plotTime then na else globexHigh_prev; 
+
+  
+
+plot Globex_high_prev = GHigh_prev; 
+
+Globex_high_prev.SetStyle(curve.SHORT_DASH);    Globex_High_prev.SetDefaultColor(color.light_red); Globex_High_prev.setLineWeight(2);  
+
+  
+
+def GLow_prev = if !allowed then dn else if Prev_Globex_extendbars and !globexfinish then  GLow_prev[1] else if !plotTime then na else  globexLow_prev;     
+
+  
+
+plot Globex_Low_prev =  GLow_prev; 
+
+   Globex_Low_prev.SetDefaultColor(color.light_red);    Globex_Low_prev.setLineWeight(2);  
+
+  
+
+  
+
+def distanc_prev = globexHigh_prev-globexLow_prev;   
+
+  
+
+def f1p= if !allowed then dn else if Prev_Fib_extendbars and !fibfinish then f1p[1] else if !plotTime then na else    Globex_Low_prev+distanc_prev*(fib_percent_1/100);    
+
+plot fib_1_prev = f1p; fib_1_prev.SetStyle(curve.SHORT_DASH);    fib_1_prev.SetDefaultColor(color.gray);  
+
+  
+
+def f2p= if !allowed then dn else if Prev_Fib_extendbars and !fibfinish then f2p[1] else if !plotTime then na else    Globex_Low_prev+distanc_prev*(fib_percent_2/100);    
+
+plot fib_2_prev = f2p; fib_2_prev.SetStyle(curve.SHORT_DASH);    fib_2_prev.SetDefaultColor(color.gray);  
+
+  
+
+def f3p= if !allowed then dn else if Prev_Fib_extendbars and !fibfinish then f3p[1] else if !plotTime then na else    Globex_Low_prev+distanc_prev*(fib_percent_3/100);    
+
+plot fib_3_prev = f3p; fib_3_prev.SetStyle(curve.SHORT_DASH);   fib_3_prev.SetDefaultColor(color.gray);  
+
+  
+
+def f4p= if !allowed then dn else if Prev_Fib_extendbars and !fibfinish then f4p[1] else if !plotTime then na else    Globex_Low_prev+distanc_prev*(fib_percent_4/100);   
+
+plot fib_4_prev= f4p; fib_4_prev.SetStyle(curve.SHORT_DASH);    fib_4_prev.SetDefaultColor(color.gray);  
+
+  
+
+def f5p= if !allowed then dn else if Prev_Fib_extendbars and !fibfinish then f5p[1] else if !plotTime then na else    Globex_Low_prev+distanc_prev*(fib_percent_5/100);   
+
+plot fib_5_prev= f5p; fib_5_prev.SetStyle(curve.SHORT_DASH);    fib_5_prev.SetDefaultColor(color.gray);  
+
+  
+
+  
+
+ 
+
+ 

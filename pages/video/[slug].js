@@ -1,4 +1,5 @@
-
+import BlockFi from "../../components/BlockFi";
+import SDisc from "../../components/Sdisc";
 import vidStyles from "../../styles/VideoPage.module.css"
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -30,15 +31,15 @@ const Video = ({ indi }) => {
         <BlockFi />
       </div>
       <div className={vidStyles.disclaimer}>
-        <ShortDisclaimer />
+        <SDisc />
       </div>
     </div>
   );
 };
 
 export async function getServerSideProps(context) {
-  const { id } = context.params;
-  const indi = await fetch(`https://www.thinktradeprofit.com/api/video/${id}`);
+  const { slug } = context.params;
+  const indi = await fetch(`https://www.thinktradeprofit.com/api/video/${slug}`);
   const data = await indi.json();
   
   if (!data) {
