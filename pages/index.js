@@ -5,7 +5,7 @@ import BlockFi from '../components/BlockFi';
 import IndiList from '../Components/IndiList';
 import Robinhood from '../components/robinhood';
 
-export default function Home({indicators}) {
+export default function Home() {
    
 
   return (
@@ -24,20 +24,6 @@ export default function Home({indicators}) {
   )
 }
 
-export const getServerSideProps = async () => {
-  const response = await fetch("https://www.thinktradeprofit.com/api/indicator");
-  
-  if (!response.ok) {
-    throw new Error(`Error: ${response.status}`);
-  }
-    
 
-  const indicators = await response.json();
-  return {
-    props: {
-      indicators
-    }
-  };
-}
  
 
