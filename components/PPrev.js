@@ -1,6 +1,6 @@
-import Avatar from './Avatar'
-import DateFormatter from './Date-formatter'
-import CoverImage from './Cover-image'
+import BAvatar from './BAvatar'
+import BDate from './BDate'
+import BCover from './BCover'
 import Link from 'next/link'
 
 export default function PostPreview({
@@ -14,7 +14,7 @@ export default function PostPreview({
   return (
     <div>
       <div className="mb-5">
-        <CoverImage
+        <BCover
           slug={slug}
           title={title}
           src={coverImage}
@@ -28,10 +28,10 @@ export default function PostPreview({
         </Link>
       </h3>
       <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
+        <BDate dateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
+      <BAvatar name={author.name} picture={author.picture} />
     </div>
   )
 }
