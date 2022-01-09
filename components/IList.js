@@ -36,18 +36,4 @@ const IList = ({indicators}) => {
 
 export default IList
 
-export const getServerSideProps = async () => {
-    const response = await fetch("https://www.thinktradeprofit.com/api/indicator");
-    
-    if (!response.ok) {
-      throw new Error(`Error: ${response.status}`);
-    }
-      
-  
-    const indicators = await response.json();
-    return {
-      props: {
-        indicators
-      }
-    };
-  }
+
