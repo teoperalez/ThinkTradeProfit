@@ -1,6 +1,5 @@
 import PageMeta from '../components/pagemeta'
 
-import BlockFi from '../Components/BlockFi'
 
 
 export default function Home({indicators}) {
@@ -11,7 +10,7 @@ export default function Home({indicators}) {
       <PageMeta title="Trading ThinkScripts || Top" description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting" /> 
       
       
-      <BlockFi />
+      
       
       
     </div>
