@@ -10,7 +10,7 @@ const StratList = ({indicators}) => {
             <h1 className={indiStyles.title}>Indicators</h1>
             <div className={indiStyles.contents}>
             {indicators.map((indicator, index) => (
-              <div id ={indicator.id}  className={indiStyles.card}  >
+              <div key ={index} id ={indicator.id}  className={indiStyles.card}  >
                   <div className={indiStyles.img} > 
               <Image src={`/${indicator.image}`} layout="fill" objectFit="cover"/>
               </div>
