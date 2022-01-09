@@ -1,4 +1,4 @@
-import Meta from '../components/Meta'
+import PageMeta from '../components/pagemeta'
 import ThoughtList from '../Components/ThoughtList'
 import IndiList from '../Components/IndiList'
 import TutorialsList from '../Components/TutorialsList'
@@ -11,7 +11,7 @@ export default function Home({indicators}) {
 
   return (
     <div>
-      <Meta title="Trading ThinkScripts || Top" description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting" /> 
+      <PageMeta title="Trading ThinkScripts || Top" description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting" /> 
       
       <ThoughtList />
       <Robinhood />

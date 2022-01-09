@@ -8,7 +8,7 @@ const Nav = () => {
         <nav className={navStyles.navbar}>
         <ul className={navStyles.navbarnav}>
           <li className={navStyles.logo}>
-            <a className={navStyles.navlink} href="#top/">
+            <a className={navStyles.navlink} href="/">
               <span className={`${navStyles.linktext} ${navStyles.logotext}`}><Image src ={ttpLogo}/></span>
               <svg
                 aria-hidden="true"
