@@ -1,10 +1,8 @@
-
 import indiStyles from "../../styles/Indicator.module.css"
 import { useRouter } from "next/router";
 import Image from "next/image";
 import PageMeta from "../../components/pagemeta";
 import BlockFi from "../../components/BlockFi";
-import ShortDisclaimer from "../../Components/ShortDisclaimer";
 
 
 const Indicator = ({ indi }) => {
@@ -41,7 +39,7 @@ const Indicator = ({ indi }) => {
         <BlockFi />
       </div>
       <div className={indiStyles.disclaimer}>
-        <ShortDisclaimer />
+        
       </div>
     </div>
   );
