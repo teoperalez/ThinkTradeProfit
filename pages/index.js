@@ -24,7 +24,7 @@ export default function Home({indicators}) {
 }
 
 export const getServerSideProps = async () => {
-  const response = await fetch("https://localhost:3000/api/indicator");
+  const response = await fetch("https://www.thinktradeprofit.com/api/indicator");
   
   if (!response.ok) {
     throw new Error(`Error: ${response.status}`);
