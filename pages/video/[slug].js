@@ -20,7 +20,7 @@ const Video = ({ indi }) => {
       </div>
       <h2 className={vidStyles.get}>Get this indicator <Link href = "/"><a>here</a></Link> </h2>
       <div className={vidStyles.image}>
-        <Image src={`/${indi.image}`} width={400} height={300}layout="responsive" objectFit="cover"/>
+        <Image src={indi.image} width={400} height={300}layout="responsive" objectFit="cover"/>
       </div>
       <p className={vidStyles.tags}>Tags: {indi.tags}</p>
       <h3 className={vidStyles.description}>{indi.description}</h3>
