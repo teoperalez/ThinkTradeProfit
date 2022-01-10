@@ -24,7 +24,7 @@
 
 .markdown li ul li {
   list-style-type: disc;
-  margin-left: 3rem;
+  
 }
 
 .markdown a {
@@ -37,9 +37,19 @@
 }
 
 .markdown code {
-  color:darkgreen;
-  display:flex;
+  color: var(--clr-neutral-700);
+  
   margin:0;
   padding:0;
-  line-height: 0em;
+  line-height: 0;
+  font-size:small;
+}
+
+.markdown ol>li{
+  list-style: decimal;
+  
+}
+
+.markdown li {
+  margin-left:  3rem;
 }
