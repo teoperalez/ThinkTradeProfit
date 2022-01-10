@@ -8,7 +8,7 @@ const VideoItem = ({video}) => {
             <img className={videoStyles.img} src={video.image} />
             <h2 className={videoStyles.cardtitle}>{video.title}</h2>
             <p className={videoStyles.cardbody}>{video.body}</p>
-            <Link href="/video/[id]" as={`/video/${video.id}`}>
+            <Link href="/video/[slug]" as={`/video/${video.slug}`}>
                 <a className={videoStyles.button}>Read More...</a>
             </Link>
         </div>
