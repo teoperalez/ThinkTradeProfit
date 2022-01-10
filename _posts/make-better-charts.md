@@ -7,7 +7,7 @@ author:
   name: Teo Peralez || ThinkScrIpt Tutorial Series || ThinkTradeProfit.com
   picture: '/Banner.jpg'
 ogImage:
-  url: '/assets/blog/make-better-charts/cover.jpg'
+  url: '/assets/blog/preview/cover.jpg'
 ---
 
 ### In today&#39;s tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals. 
