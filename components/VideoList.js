@@ -1,12 +1,12 @@
 import videoStyles from '../styles/Video.module.css'
 
 
-const TutorialsList = ( ) => {
+const VideoList = ( ) => {
 
     return (
         
         <div className={videoStyles.sectiontop}>
-            <h1 className={videoStyles.title}>ThinkScript Tutorials</h1>
+            <h1 className={videoStyles.title}>Think. Trade. Profit. YouTube Channel</h1>
             <div className={videoStyles.contents}>
                 <span>1</span>
                 <span>2</span>
@@ -16,4 +16,4 @@ const TutorialsList = ( ) => {
     )
 }
 
-export default TutorialsList
+export default VideoList

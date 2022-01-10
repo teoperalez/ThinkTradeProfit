@@ -10,16 +10,6 @@ export const data = [
       url: "https://youtu.be/Zc4_kujRS-Y",
       body: "tutorial_1",
     },
-    {
-      id: 2,
-      title: "Make Better Charts - RSI + Bollinger Bands + MACD + 200EMA with Colored Bars",
-      slug: "GaYS5sVOenQ",
-      list: "tutorial",
-      description: "A ThinkScript Tutorial for Adding Colored Bars based on a Combined Study set",
-      image: "Tutorial1.jpg",
-      tags: "ThinkorSwim, ThinkScript, MACD, RSI, Bollinger Bands, Exponential Moving Average, EMA, Technical Analysis, Study, Finance, Investing, Profit, Youtube",
-      url: "https://youtu.be/Zc4_kujRS-Y",
-      body: "tutorial_1",
-    },
+    
    
   ];

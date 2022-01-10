@@ -12,7 +12,7 @@ const IList = ({indicators}) => {
             {indicators.map((indicator, index) => (
               <div key ={index} id ={indicator.id}  className={indiStyles.card}  >
                   <div className={indiStyles.img} > 
-              <Image src={`/${indicator.image}`} layout="fill" objectFit="cover"/>
+              <Image src={indicator.image} layout="fill" objectFit="cover"/>
               </div>
               <h2 className={indiStyles.cardtitle}>{indicator.title}</h2>
               <div className={indiStyles.cardcontent}>

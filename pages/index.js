@@ -1,5 +1,5 @@
 import PageMeta from '../components/pagemeta'
-import TutorialsList from '../components/tutorialslist';
+import VideoList from '../components/VideoList';
 import ThoughtList from '../components/thoughtlist';
 import BlockFi from '../components/BlockFi';
 import Robinhood from '../components/robinhood';
@@ -20,7 +20,7 @@ export default function Home({indicators, allPosts}) {
       <BlockFi />
       <IList indicators={indicators}/>
       <Robinhood />
-      <TutorialsList />
+      <VideoList />
       
       
       
