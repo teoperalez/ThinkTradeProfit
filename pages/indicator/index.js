@@ -1,5 +1,6 @@
 import BLayout from "../../components/BLayout";
 import IList from "../../components/IList";
+import PageMeta from "../../components/pagemeta";
 
 export default function Indicator({ indicators }) {
     return (

@@ -8,7 +8,7 @@ const VideoList = ({videos}) => {
     return (
         
         <div className={indiStyles.sectiontop}>
-            <h1 className={indiStyles.title}>Indicators</h1>
+            <h1 className={indiStyles.title}>Videos</h1>
             <div className={indiStyles.contents}>
             {videos.map((indicator, index) => (
               <div key ={index} id ={indicator.id}  className={indiStyles.card}  >

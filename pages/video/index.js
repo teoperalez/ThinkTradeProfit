@@ -1,5 +1,7 @@
 import BLayout from "../../components/BLayout";
 import VideoList from "../../components/VideoList";
+import PageMeta from "../../components/pagemeta";
+
 export default function Video({ videos }) {
     return (
         <>
@@ -16,11 +18,11 @@ export const getServerSideProps = async () => {
     if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
       }
-      const videoss = await response.json();
+      const videos = await response.json();
   
   return {
     props: {
-      videoss 
+      videos 
       
     }
   };
