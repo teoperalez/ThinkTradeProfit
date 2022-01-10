@@ -10,9 +10,9 @@ ogImage:
   url: '/assets/blog/preview/cover.jpg'
 ---
 
-### _In today&#39;s tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals. 
+### _In today&#39;s tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals._ 
 
-This example will use the Bollinger Bands and RSI for reversal signals, the MACD and Middle Line of the Bollinger Bands for trend-following entry signals, and a 200-period Exponential Moving Average (EMA) to filter out counter-trend signals._
+This example will use the Bollinger Bands and RSI for reversal signals, the MACD and Middle Line of the Bollinger Bands for trend-following entry signals, and a 200-period Exponential Moving Average (EMA) to filter out counter-trend signals.
 
 ## ***Imagine this simple strategy....***
 ##
