@@ -1,6 +1,6 @@
 ---
-title: 'Make Better Charts  RSI + Bollinger Bands + MACD + 200EMA w/ Colored Bars'
-excerpt: 'In todays tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals. This example will use the Bollinger Bands and RSI for reversal signals, the MACD and Middle Line of the Bollinger Bands for trend-following entry signals, and a 200-period Exponential Moving Average (EMA) to filter out counter-trend signals.'
+title: 'Make Better Charts'
+excerpt: 'RSI + Bollinger Bands + MACD + 200EMA w/ Colored Bars - In todays tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals.'
 coverImage: '/assets/blog/preview/cover.jpg'
 date: '2022-01-06T05:35:07.322Z'
 author:
