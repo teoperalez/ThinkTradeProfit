@@ -6,12 +6,12 @@ export default function handler(request, response) {
   if (method === "GET") {
     const { slug } = request.query;
 
-    const indi = data.find((indi) => indi.slug.toString() === slug);
+    const vid = data.find((indi) => indi.slug.toString() === slug);
 
-    if (!indi) {
-      return response.status(400).json("Indicator not found");
+    if (!vid) {
+      return response.status(400).json("Video not found");
     }
 
-    return response.status(200).json(indi);
+    return response.status(200).json(vid);
   }
 }

@@ -8,7 +8,7 @@ import { getAllPosts } from '../lib/api';
 
 
 
-export default function Home({indicators, allPosts}) {
+export default function Home({indicators, allPosts, videos}) {
    
 
   return (
@@ -20,7 +20,7 @@ export default function Home({indicators, allPosts}) {
       <BlockFi />
       <IList indicators={indicators}/>
       <Robinhood />
-      <VideoList />
+      <VideoList videos = {videos} />
       
       
       
@@ -32,6 +32,7 @@ export default function Home({indicators, allPosts}) {
 
 export const getServerSideProps = async () => {
   const response = await fetch("https://www.thinktradeprofit.com/api/indicator");
+  const response2 = await fetch("https://www.thinktradeprofit.com/api/video");
   
   if (!response.ok) {
     throw new Error(`Error: ${response.status}`);
@@ -47,10 +48,12 @@ export const getServerSideProps = async () => {
     
 
   const indicators = await response.json();
+  const videos = await response2.json();
   return {
     props: {
       indicators, 
-      allPosts
+      allPosts,
+      videos
     }
   };
 }
