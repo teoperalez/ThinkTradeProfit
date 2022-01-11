@@ -1,10 +1,10 @@
 ---
 title: 'Make Better Charts'
 excerpt: 'RSI + Bollinger Bands + MACD + 200EMA w/ Colored Bars - In todays tutorial, we will learn how to make a chart significantly more readable by adding colored bars associated with different conditions – Overbought, Oversold, and Middle Line Crossovers for entry signals.'
-coverImage: '/assets/blog/preview/Cover.jpg'
+coverImage: '/assets/blog/preview/UptrendEx.png'
 date: '2022-01-06T05:35:07.322Z'
 author:
-  name: Teo Peralez || ThinkScrIpt Tutorial Series || ThinkTradeProfit.com
+  name: Teo Peralez || ThinkScript Tutorial Series || ThinkTradeProfit.com
   picture: '/Banner.jpg'
 ogImage:
   url: '/assets/blog/preview/Cover.jpg'
