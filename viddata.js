@@ -13,10 +13,10 @@ export const data = [
 
     {
       id: 2,
-      title: "Full Backtest: RSI + 200EMA VS RSI + BB + 200EMA on #SPY, /#BTC, & #EUR/USD #Backtests",
+      title: "Full Backtest: RSI + 200EMA VS RSI + BB + 200EMA on SPY, /BTC, & EUR/USD Backtests",
       slug: "w8mcKLcR3_M",
       list: "backtest",
-      description: "Whkich is better, one indicator or two? What is the best timeframe for the RSI and Bolliger Bands?   Let's find out!",
+      description: "Which is better, one indicator or two? What is the best timeframe for the RSI and Bolliger Bands?   Let's find out!",
       image: "/videos/RSIBBBacktestCover.jpg",
       tags: "ThinkorSwim, ThinkScript, RSI, Bollinger Bands, Backtest, Exponential Moving Average, EMA, Technical Analysis, Study, Finance, Investing, Profit, Youtube",
       url: "https://www.youtube.com/watch?v=w8mcKLcR3_M",

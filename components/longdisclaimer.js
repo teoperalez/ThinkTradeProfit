@@ -4,8 +4,8 @@ const LongDisclaimer = () => {
 
     return ( 
         <div className = {styles.disclaimer}>
-            <h1>Risk Warning</h1>
-
+            <h1 className="mb-4 text-4xl lg:text-6xl leading-tight">Risk Warning</h1>
+                <br />
                 <p>Before deciding to participate in the financial markets, you should carefully consider your investment objectives, level of experience and risk appetite. Most importantly, do not invest money you cannot afford to lose.</p>
                 <br /><p>All technical indicators purchased from ThinkTRadeProfit.com are used at the buyers discretion and risk.  No guarantees are made of profitability, and all trading strategies are used at your own risk.</p>
                 <br /><p>By purchasing an indicator from ThinkTradeProfit.com, you agree to release all liability from the developer for any trading losses that might be incurred</p>

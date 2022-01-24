@@ -1,4 +1,5 @@
 import PageMeta from '../components/pagemeta'
+import Introduction from '../components/Introduction';
 import VideoList from '../components/VideoList';
 import ThoughtList from '../components/thoughtlist';
 import BlockFi from '../components/BlockFi';
@@ -15,7 +16,7 @@ export default function Home({indicators, allPosts, videos}) {
     <div>
       <PageMeta title="Trading ThinkScripts || Top" description="Strategies for the Intelligent Trader" tags="investing, forex, stocks, techncal analysis, charts, trading signals, trading indicators, backtesting" /> 
       
-      
+      <Introduction/>
       <ThoughtList allPosts={allPosts}/>
       <BlockFi />
       <IList indicators={indicators}/>
