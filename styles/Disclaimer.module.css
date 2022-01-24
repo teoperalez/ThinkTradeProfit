@@ -1,7 +1,7 @@
   .disclaimer {
-    margin: 3rem 3rem 3rem 1rem;
-    line-height: 1.5;
-    font-size: 2rem;
+    margin: 3rem 5rem 3rem 1rem;
+    line-height: 2;
+    font-size: 1rem;
     max-width: 100%;
 
   }
@@ -11,8 +11,19 @@
   }
 
   .list {
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     list-style-type: disc;
     list-style: circle;
+  }
+
+  .numlist {
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    list-style-type: decimal;
+    list-style:decimal;
   }
 
   @media (max-width: 35rem) {
