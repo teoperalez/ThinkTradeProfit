@@ -17,7 +17,7 @@ const Introduction = () => {
                         <li>Push back against those in the trading industry that make outlandish claims, post unverifiable result, and ultimately cost YOU money!</li>
                     </ul> 
                 </p>
-                <br /><p className="mb-4 mr-8 text-2xl lg:text-2xl leading-tight">If that sounds interesting to you, check some of the free articles in the Thoughts Blog, some of my free indicators, and the video contents below.  
+                <br /><p className="mb-4 mr-6 text-2xl lg:text-2xl leading-tight">If that sounds interesting to you, check some of the free articles in the Thoughts Blog, some of my free indicators, and the video contents below.  
                 </p>
                 <br /><p className="mb-4 mr-8 text-xs lg:text-xs leading-tight">***I am not endorsed by or in any way affiliated with ThinkOrSwim (other than having a personal balance in my account with them).   I use ThinkScript simply because it is the language whih I understand best and feel most somfortable coding projects in.</p>
         </div>

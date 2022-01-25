@@ -13,6 +13,10 @@ const Before = () => {
                 <li>For Indicator orders:
             <ol className = {styles.numlist}>
                 <li>
+                    I am selling coding services only.  I will code exacty what is listed in the offer.   Please negotiate ny changes to the requirements before making an order.   
+                </li>
+                
+                <li>
                     I do not sell my own ideas or systems.  The Buyer must specify in full the indicator logic to be coded (either providing existing indicators or laying out the logic of the indicator).    
                 </li>
                 <li>
