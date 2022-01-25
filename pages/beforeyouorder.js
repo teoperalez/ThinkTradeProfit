@@ -15,6 +15,9 @@ const Before = () => {
                 <li>
                     I am selling coding services only.  I will code exacty what is listed in the offer.   Please negotiate ny changes to the requirements before making an order.   
                 </li>
+                <li>
+                    I do not reverse engineer paid systems.   It is not fair to the developers of those systems, in most cases violates the license of those systems, and in most cases, a similar product can be rendered with publicly available indictors.   
+                </li>
                 
                 <li>
                     I do not sell my own ideas or systems.  The Buyer must specify in full the indicator logic to be coded (either providing existing indicators or laying out the logic of the indicator).    
